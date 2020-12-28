@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Card</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+  <div class="container payment_card">
+    <button class="close_button"><img src="assets/images/close_button.png" alt="close.jpg"></button>
+    <div class="row d-flex justify-content-center">
+      <div class="col-10 text-center">
+        <p class="payment_card_title">Форма для принятия платежа</p>
+        <p class="payment_card_title currency_title" style="display: none;">Отправить предварительный платеж</p>
+      </div>
+    </div>
+    <div class="row my_cards_content d-flex justify-content-center align-items-center">
+      <div class="col-lg-3 col-12">
+        <div class="payment_card_item w-100">
+
+          <div class="payment_card_list">
+            <label for="visaCardRadio" data-radio="visa__card" class="radio_wrap">
+              <input type="radio" name="card" id="visaCardRadio" value="visa " checked>
+              <div class="check"></div>
+              <span class="wrap">Visa / MasterCard</span>
+            </label>
+            <img src="assets/images/visa.png" alt="visa.jpg" class="card_list_img">
+          </div>
+
+          <div class="payment_card_list">
+            <label for="webMoneyRadio" data-radio="webMoney__card" class="radio_wrap">
+              <input type="radio" name="card" id="webMoneyRadio" value="webMoney">
+              <div class="check"></div>
+              <span>WebMoney</span>
+            </label>
+            <img src="assets/images/webMoney.png" alt="webMoney.jpg">
+          </div>
+
+          <div class="payment_card_list">
+            <label for="qiwiCardRadio" data-radio="qiwi__card" class="radio_wrap">
+              <input type="radio" name="card" id="qiwiCardRadio" value="qiwi">
+              <div class="check"></div>
+              <span>Qiwi</span>
+            </label>
+            <img src="assets/images/qiwi.png" alt="qiwi.jpg">
+          </div>
+
+          <div class="payment_card_list">
+            <label for="yandexCardRadio" data-radio="yandex__card" class="radio_wrap">
+              <input type="radio" name="card" id="yandexCardRadio" value="yandex">
+              <div class="check"></div>
+              <span>Яндекс Деньги</span>
+            </label>
+            <img src="assets/images/yandex.png" alt="yandex.jpg" class="card_list_img">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-9 col-12 visa__card card_content">
+        <div class="payment_card_info w-100 review">
+          <form action="" method="GET" class="card_info_item form_visaCard">
+            <div class="card_info_list">
+              <div class="card_info_inputs">
+                <div class="card_info_input">
+                  <label for="card_number">VISA</label>
+                  <input type="text" id="card_number" class="input_card" maxlength="19"
+                    placeholder="0000 0000 0000 0000" required>
+                </div>
+
+                <div class="card_info_input">
+                  <label for="card_cvv">CVV</label>
+                  <input type="text" id="card_cvv" class="input_card" maxlength="3" placeholder="CVV"
+                    onkeypress="return (event.charCode >= 48 && event.charCode <= 57);" required>
+                </div>
+
+                <div class="card_info_input">
+                  <label for="card_data">ГОД</label>
+                  <input type="text" id="card_date" class="input_card" maxlength="5" placeholder="00/00"
+                    onkeypress="return (event.charCode >= 48 && event.charCode <= 57);" required>
+                </div>
+              </div>
+              <div class="card_info_input">
+                <input type="text" id="card_name" class="input_card" placeholder="EVGENYI PETROV"
+                  style='text-transform:uppercase' required>
+              </div>
+            </div>
+            <div class="card_get_info">
+              <button type="submit" class="get_button get_advance_box" id="get_visa">
+                получить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- VISA card -->
+
+      <div class="col-md-9 col-12 webMoney__card card_content">
+        <form action="" method="GET" class="payment_card_info mobile_card w-100">
+          <div class="card_info_item">
+            <div class="card_info_input">
+              <label for="webMoney">WebMoney</label>
+              <input type="text" id="webMoney" class="input_card" maxlength="15" placeholder="WMID"
+                style="text-transform: uppercase;" required>
+            </div>
+            <div class="card_get_info">
+              <button type="submit" class="get_button get_advance_box" id="get_webMoney">
+                получить
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- WebMoney card -->
+
+      <div class="col-md-9 col-12 qiwi__card card_content">
+        <form action="" method="GET" id="qiwi_form" class="payment_card_info mobile_card w-100">
+          <div class="card_info_item">
+            <div class="card_info_inputs">
+              <div class="card_info_input">
+                <label for="qiwi">Qiwi</label>
+                <input type="text" id="qiwi" class="input_card qiwi_number" placeholder="Номер телефона" required>
+              </div>
+            </div>
+            <div class="card_get_info">
+              <button type="submit" class="get_button get_advance_box" id="get_qiwi">
+                получить
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- QIWI card -->
+
+      <div class="col-md-9 col-12 yandex__card  card_content">
+        <form action="" method="GET" class="payment_card_info mobile_card w-100">
+          <div class="card_info_item">
+            <div class="card_info_inputs">
+              <div class="card_info_input">
+                <label for="yandex">Яндекс Деньги</label>
+                <input type="text" id="yandex" class="input_card" maxlength="19" placeholder="0000 0000 0000 0000"
+                  onkeypress="return (event.charCode >= 48 && event.charCode <= 57);" required>
+              </div>
+            </div>
+            <div class="card_get_info">
+              <button type="submit" class="get_button get_advance_box" id="get_yandex">
+                получить
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- YANDEX card -->
+
+    </div>
+    <!-- end payment cards ******************************************************************************************** -->
+
+
+    <div class="row">
+      <div class="col-10 my_card_title">
+        <p>Мои карты / кошельки</p>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-10">
+        <div class="my_card w-100">
+          <span class="my_card_name">VISA</span> <br>
+          <span class="my_card_number"> 5168 **** **** 2548</span>
+          <div class="my_name_info">
+            <p class="my_name">EVGENIY PETROV</p>
+            <span class="my_card_data">10/22</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6 col-10 my__cards">
+        <div class="my_card w-100">
+          <span class="my_card_name">VISA</span> <br>
+          <span class="my_card_number"> 5168 **** **** 2548</span>
+          <div class="my_name_info">
+            <p class="my_name">EVGENIY PETROV</p>
+            <span class="my_card_data">10/22</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6 col-10 my__cards">
+        <div class="my_card w-100">
+          <span class="my_card_name">VISA</span> <br>
+          <span class="my_card_number"> 5168 **** **** 2548</span>
+          <div class="my_name_info">
+            <p class="my_name">EVGENIY PETROV</p>
+            <span class="my_card_data">10/22</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6 col-10 my__cards">
+        <div class="my_card w-100">
+          <span class="my_card_name">VISA</span> <br>
+          <span class="my_card_number"> 5168 **** **** 2548</span>
+          <div class="my_name_info">
+            <p class="my_name">EVGENIY PETROV</p>
+            <span class="my_card_data">10/22</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/jquery-3.5.1.js"></script>
+  <script src="assets/js/jquery.mask.js"></script>
+  <script src="assets/js/cards.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/getCard.js"></script>
+
+</body>
+
+</html>

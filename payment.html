@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Card</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+  <div class="container payment_card">
+    <button class="close_button"><img src="assets/images/close_button.png" alt="close.jpg"></button>
+    <div class="row d-flex justify-content-center">
+      <div class="col-10 text-center">
+        <p class="payment_card_title currency_title">Отправить предварительный платеж</p>
+      </div>
+    </div>
+    <div class="row my_cards_content d-flex justify-content-center align-items-center">
+      <div class="col-lg-3 col-12">
+        <div class="payment_card_item w-100">
+
+          <div class="payment_card_list">
+            <label for="visaCardRadio" data-radio="visa__card" class="radio_wrap">
+              <input type="radio" name="card" id="visaCardRadio" value="visa " checked>
+              <div class="check"></div>
+              <span class="wrap">Visa / MasterCard</span>
+            </label>
+            <img src="assets/images/visa.png" alt="visa.jpg" class="card_list_img">
+          </div>
+
+          <div class="payment_card_list">
+            <label for="webMoneyRadio" data-radio="webMoney__card" class="radio_wrap">
+              <input type="radio" name="card" id="webMoneyRadio" value="webMoney">
+              <div class="check"></div>
+              <span>WebMoney</span>
+            </label>
+            <img src="assets/images/webMoney.png" alt="webMoney.jpg">
+          </div>
+
+          <div class="payment_card_list">
+            <label for="qiwiCardRadio" data-radio="qiwi__card" class="radio_wrap">
+              <input type="radio" name="card" id="qiwiCardRadio" value="qiwi">
+              <div class="check"></div>
+              <span>Qiwi</span>
+            </label>
+            <img src="assets/images/qiwi.png" alt="qiwi.jpg">
+          </div>
+
+          <div class="payment_card_list">
+            <label for="yandexCardRadio" data-radio="yandex__card" class="radio_wrap">
+              <input type="radio" name="card" id="yandexCardRadio" value="yandex">
+              <div class="check"></div>
+              <span>Яндекс Деньги</span>
+            </label>
+            <img src="assets/images/yandex.png" alt="yandex.jpg" class="card_list_img">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-9 col-12 visa__card card_content">
+        <div class="send_advance_payment w-100 review" id="visa_advance">
+          <form action="" method="GET" class="send_advance_item">
+            <div class="send_advance_input">
+              <label for="visa_send">К оплате</label>
+              <input type="text" id="visa_send" class="input_card_advance" maxlength="22"
+                onkeypress="return (event.charCode >= 48 && event.charCode <= 57);" required>
+              <span>Ваши денежные средства будут зарезервированы на нашей платформ, до подтверждения вами, выполненной
+                работы. Комиссия платформы составляет 4% от общей суммы.</span>
+              <span class="currency">usd</span>
+            </div>
+            <div class="card_get_info">
+              <button type="submit" class="get_button send_currency">
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- VISA card -->
+
+      <div class="col-md-9 col-12 webMoney__card card_content">
+        <form action="" method="GET" class="send_advance_payment w-100 review" id="webMoney_advance">
+          <div class="send_advance_item">
+            <div class="send_advance_input">
+              <label for="webMoney_send">К оплате</label>
+              <input type="text" id="webMoney_send" class="input_card_advance" maxlength="22"
+                onkeypress="return (event.charCode >= 48 && event.charCode <= 57);" required>
+              <span>Ваши денежные средства будут зарезервированы на нашей платформ, до подтверждения вами, выполненной
+                работы. Комиссия платформы составляет 4% от общей суммы.</span>
+              <span class="currency">usd</span>
+            </div>
+            <div class="card_get_info">
+              <button type="submit" class="get_button send_currency">
+                Отправить
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- WebMoney card -->
+
+      <div class="col-md-9 col-12 qiwi__card card_content">
+        <form action="" method="GET" class="send_advance_payment w-100 review" id="yandex_advance">
+          <div class="send_advance_item">
+            <div class="send_advance_input">
+              <label for="qiwi_send">К оплате</label>
+              <input type="text" id="qiwi_send" class="input_card_advance" maxlength="22"
+                onkeypress="return (event.charCode >= 48 && event.charCode <= 57);" required>
+              <span>Ваши денежные средства будут зарезервированы на нашей платформ, до подтверждения вами, выполненной
+                работы. Комиссия платформы составляет 4% от общей суммы.</span>
+              <span class="currency">usd</span>
+            </div>
+            <div class="card_get_info">
+              <button type="submit" class="get_button send_currency">
+                Отправить
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- QIWI card -->
+
+      <div class="col-md-9 col-12 yandex__card  card_content">
+        <div class="send_advance_payment w-100 review" id="yandex_advance">
+          <form action="" method="GET" class="send_advance_item">
+            <div class="send_advance_input">
+              <label for="yandex_send">К оплате</label>
+              <input type="text" id="yandex_send" class="input_card_advance" maxlength="22"
+                onkeypress="return (event.charCode >= 48 && event.charCode <= 57);" required>
+              <span>Ваши денежные средства будут зарезервированы на нашей платформ, до подтверждения вами, выполненной
+                работы. Комиссия платформы составляет 4% от общей суммы.</span>
+              <span class="currency">rub</span>
+            </div>
+            <div class="card_get_info">
+              <button type="submit" class="get_button send_currency">
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- YANDEX card -->
+
+    </div>
+    <!-- end payment cards ******************************************************************************************** -->
+  </div>
+
+  <script src="assets/js/jquery-3.5.1.js"></script>
+  <script src="assets/js/cards.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,618 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #0006;
+  padding: 20px 0;
+}
+
+body .container {
+  position: relative;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 35px 20px;
+  max-width: 1050px;
+}
+
+body .container .close_button {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  background: transparent;
+  border: none;
+}
+
+body .container .close_button:focus {
+  outline: none;
+}
+
+body .container .close_button img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body .container .payment_card_title {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 20px;
+}
+
+body .container .payment_card_item {
+  background-color: #f8f8fa;
+  padding: 20px;
+  border-radius: 10px;
+  height: 210px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .container .payment_card_list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+body .container .payment_card_list label {
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding-left: 25px;
+}
+
+body .container input[type="radio"] {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  opacity: 0;
+}
+
+body .container .check {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #253556;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+body .container label span {
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+body .container .check::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+body .container input[type="radio"]:checked + .check {
+  border: 1px solid #00cf4d;
+}
+
+body .container input[type="radio"]:checked + .check + span {
+  color: #00cf4d;
+}
+
+body .container input[type="radio"]:checked {
+  color: #00cf4d;
+}
+
+body .container input[type="radio"]:checked + .check::before {
+  background-color: #00cf4d;
+}
+
+body .container .payment_card_info,
+body .container .send_advance_payment {
+  height: 210px;
+  background-color: #f8f8fa;
+  border-radius: 10px;
+  padding: 25px 30px;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+body .container .card_list_img {
+  margin-bottom: 10px;
+}
+
+body .container .card_info_inputs {
+  max-width: 440px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container .card_info_input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .container .card_info_input label {
+  font-size: 18px;
+  font-weight: 500;
+  color: #00cf4d;
+  padding-left: 20px;
+}
+
+body .container .card_info_input input,
+body .container .send_advance_input input {
+  border: none;
+  background-color: #fff;
+  border-radius: 10px;
+  height: 50px;
+  padding-left: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #253556;
+}
+
+body .container .card_info_input input:focus,
+body .container .send_advance_input input:focus {
+  outline: none;
+}
+
+body .container .card_info_input input::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  color: #253556;
+}
+
+body .container .card_info_input input:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  color: #253556;
+}
+
+body .container .card_info_input input::-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  color: #253556;
+}
+
+body .container .card_info_input input::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+  color: #253556;
+}
+
+body .container #card_number {
+  width: 205px;
+}
+
+body .container #card_name {
+  width: 310px;
+}
+
+body .container #card_cvv,
+body .container #card_date {
+  width: 95px;
+  text-align: left !important;
+}
+
+body .container #webMoney,
+body .container #qiwi,
+body .container #yandex {
+  width: 310px;
+  margin-top: 20px;
+}
+
+body .container .card_info_list {
+  width: 445px;
+  height: 155px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container .card_info_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container .get_button {
+  width: 155px;
+  height: 40px;
+  background-color: #00cf4d;
+  border: none;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+body .container .get_button:hover {
+  -webkit-box-shadow: 2px 3px 26px -3px #00cf4d;
+  box-shadow: 2px 3px 26px -3px #00cf4d;
+  color: #fff;
+}
+
+body .container .get_button:focus {
+  outline: none;
+}
+
+body .container .my_card_title p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+body .container .my_card_title {
+  margin: 20px 0;
+}
+
+body .container .my_card {
+  background-color: #f8f8fa;
+  padding: 30px 20px 10px;
+  border-radius: 10px;
+  height: 135px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+body .container .my_card:hover {
+  border: 1px solid #00cf4d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .container .my_name_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+body .container .my_card_name {
+  color: #00cf4d;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+body .container .my_card_number {
+  font-size: 14px;
+  font-weight: 500;
+  color: #253556;
+}
+
+body .container .send_advance_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container .send_advance_input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 500px;
+  position: relative;
+}
+
+body .send_advance_input label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+body .send_advance_input span {
+  font-size: 12px;
+  padding-top: 25px;
+}
+
+body .currency {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  top: 25px;
+  right: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  body .card_info_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .payment_card .payment_card_info {
+    height: 260px;
+  }
+  body .payment_card .card_info_inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 400px;
+  }
+  body #card_number {
+    width: 180px !important;
+    padding: 0 0 0 15px;
+    font-size: 15px;
+  }
+  body #card_cvv,
+  body #card_date {
+    width: 75px !important;
+    padding: 0 0 0 15px;
+  }
+  body .card_get_info {
+    margin-top: 20px;
+  }
+  body .card_content {
+    margin-top: 20px;
+  }
+  body .my__cards {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    padding: 0 !important;
+  }
+  body .card_info_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 10px;
+    height: 100% !important;
+  }
+  body .close_button {
+    top: 15px !important;
+    right: 25px !important;
+  }
+  body .payment_card_title {
+    font-size: 16px !important;
+    font-weight: 600;
+    padding-bottom: 15px;
+  }
+  body .my_card_title p {
+    font-size: 18px !important;
+  }
+  body .payment_card_item {
+    height: 160px !important;
+  }
+  body .payment_card_info {
+    height: 280px;
+    padding: 0 !important;
+  }
+  body .payment_card .card_info_inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 400px;
+  }
+  body .card_info_list {
+    width: 100% !important;
+    height: 135px !important;
+  }
+  body #card_number,
+  body #card_cvv,
+  body #card_date,
+  body #card_name {
+    width: 140px !important;
+    height: 40px;
+    padding: 0 0 0 5px;
+    font-size: 13px !important;
+  }
+  body #card_number::-webkit-input-placeholder,
+  body #card_cvv::-webkit-input-placeholder,
+  body #card_date::-webkit-input-placeholder,
+  body #card_name::-webkit-input-placeholder {
+    font-size: 13px !important;
+  }
+  body #card_number:-ms-input-placeholder,
+  body #card_cvv:-ms-input-placeholder,
+  body #card_date:-ms-input-placeholder,
+  body #card_name:-ms-input-placeholder {
+    font-size: 13px !important;
+  }
+  body #card_number::-ms-input-placeholder,
+  body #card_cvv::-ms-input-placeholder,
+  body #card_date::-ms-input-placeholder,
+  body #card_name::-ms-input-placeholder {
+    font-size: 13px !important;
+  }
+  body #card_number::placeholder,
+  body #card_cvv::placeholder,
+  body #card_date::placeholder,
+  body #card_name::placeholder {
+    font-size: 13px !important;
+  }
+  body #card_cvv,
+  body #card_date {
+    width: 50px !important;
+    padding: 0 0 0 10px;
+  }
+  body #card_cvv {
+    margin-left: 5px;
+  }
+  body #card_name {
+    width: 250px !important;
+  }
+  body #visa_send,
+  body #webMoney_send,
+  body #qiwi_send,
+  body #yandex_send {
+    height: 40px;
+  }
+  body #webMoney,
+  body #qiwi,
+  body #yandex {
+    margin-top: 0 !important;
+    height: 40px;
+  }
+  body .card_get_info {
+    margin-top: 20px;
+  }
+  body .card_content {
+    margin-top: 20px;
+  }
+  body .card_get_info,
+  body .get_button {
+    width: 100% !important;
+    margin-bottom: 10px;
+    height: 30px !important;
+  }
+  body .card_info_input label {
+    font-size: 13px !important;
+    padding-left: 20px;
+    padding-top: 15px;
+  }
+  body .my__cards {
+    margin-top: 15px;
+  }
+  body .send_advance_payment {
+    height: 230px !important;
+    padding: 10px 5px !important;
+  }
+  body .send_advance_input label {
+    padding-left: 15px;
+  }
+  body .send_advance_input span {
+    font-size: 10px;
+  }
+  body .send_advance_item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .card_info_input,
+  body .card_info_input input,
+  body .card_info_inputs {
+    width: 100% !important;
+  }
+  body .card_info_input {
+    height: 100px !important;
+  }
+  body .mobile_card {
+    height: 160px !important;
+  }
+}
+
+@media screen and (max-width: 327px) {
+  .container {
+    margin-left: 35px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
